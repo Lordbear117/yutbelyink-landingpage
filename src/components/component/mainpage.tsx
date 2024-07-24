@@ -9,23 +9,25 @@ export default function mainpage() {
   return (
     
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-4 lg:px-6 h-14 flex items-center">
+      <header className="px-4 lg:px-6 h-14 flex items-center sticky top-0 z-50 bg-white">
       <Link href="#" className="flex items-center justify-center" prefetch={false}>
           <FlowerIcon className="h-6 w-6" />
-          <span className="sr-only">YutbelyInk</span>
         </Link>
+        <Link href="#" className="text-md font-medium hover:underline underline-offset-4 pl-2 font-bold" prefetch={false}>
+            YUTBELYINK
+          </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link href="#portfolio" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Portfolio
+          <Link href="#hero" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+            Trabajos
           </Link>
           <Link href="#acerca" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
-            Acerca
+            Sobre mi
           </Link>
           <Link href="#contacto" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Contacto
           </Link>
         </nav>
-        <div className="ml-4 flex gap-4">
+        {/* <div className="ml-4 flex gap-4">
           <Link href="#" className="text-muted-foreground hover:text-primary" prefetch={false}>
             <FacebookIcon className="h-5 w-5" />
             <span className="sr-only">Facebook</span>
@@ -42,7 +44,7 @@ export default function mainpage() {
             <PhoneIcon className="h-5 w-5" />
             <span className="sr-only">Whatsapp</span>
           </Link>
-        </div>
+        </div> */}
       </header>
       
       <main className="flex-1">
@@ -52,14 +54,14 @@ export default function mainpage() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                    Tatuajes de Arlette
+                    Tatuajes de Arlette | Yutbelyink
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     Descubre el arte de los tatuajes con Arlette, un talento creciente en la industria. Agenda una cita hoy para 
                     descubrir tu proximo tatuaje.
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 min-[400px]:flex-row pb-4 pt-4">
                   <Link
                     href="#contacto"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
@@ -69,13 +71,15 @@ export default function mainpage() {
                   </Link>
                 </div>
               </div>
+              <div className="pt-4">
               <img
                 src="/header-picture.jpg"
                 width="550"
                 height="550"
                 alt="Hero"
-                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full lg:order-last lg:aspect-square"
+                className="mx-auto aspect-video overflow-hidden rounded-full object-cover sm:w-full lg:order-last lg:aspect-square "
               />
+              </div>
             </div>
           </div>
         </section>
@@ -120,7 +124,7 @@ export default function mainpage() {
                   className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center"
                 />
               </div>
-              <div className="flex flex-col justify-center space-y-4">
+              <div className="flex flex-col justify-center space-y-4 pt-4">
                 <div className="grid gap-1">
                   <h3 className="text-xl font-bold">Diseños Unicos</h3>
                   <p className="text-muted-foreground">
@@ -145,6 +149,7 @@ export default function mainpage() {
               </div>
             </div>
           </div>
+          
         </section>
         <section id="acerca" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container px-4 md:px-6">
@@ -187,11 +192,14 @@ export default function mainpage() {
                 Elige alguna de las siguientes opciones para ponerte en contacto.
                 </p>
               </div>
-              <div className="mx-auto w-full max-w-md space-y-4">
+              <div className="mx-auto w-full max-w-md space-y-4 pt-4">
                 <div className="grid grid-cols-2 gap-4">
                   <Link
                     target="_blank" href="https://wa.me/526671618878?text=Hola,%20soy%20Arlette.%20Enviame%20un%20mensaje."
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex items-center justify-center rounded-md bg-primary 
+                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors 
+                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring 
+                    disabled:pointer-events-none disabled:opacity-50 pt-4 pb-4"
                     prefetch={false}
                   >
                     <PhoneIcon className="h-5 w-5 mr-2" />
@@ -199,15 +207,21 @@ export default function mainpage() {
                   </Link>
                   <Link
                     target="_blank" href="https://www.instagram.com/yutbely.ink/"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex items-center justify-center rounded-md bg-primary 
+                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors 
+                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 
+                    focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 pt-4 pb-4"
                     prefetch={false}
                   >
                     <InstagramIcon className="h-5 w-5 mr-2" />
-                    Mensaje en Instagram
+                    Instagram
                   </Link>
                   <Link
                     href={`mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex items-center justify-center rounded-md bg-primary 
+                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors 
+                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring 
+                    disabled:pointer-events-none disabled:opacity-50 pt-4 pb-4"
                     prefetch={false}
                   >
                     <MailIcon className="h-5 w-5 mr-2" />
@@ -215,7 +229,10 @@ export default function mainpage() {
                   </Link>
                   <Link
                     href="#"
-                    className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    className="inline-flex items-center justify-center rounded-md bg-primary 
+                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors 
+                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring 
+                    disabled:pointer-events-none disabled:opacity-50 pt-4 pb-4"
                     prefetch={false}
                   >
                     <CalendarIcon className="h-5 w-5 mr-2" />
@@ -226,7 +243,6 @@ export default function mainpage() {
             </div>
           </div>
         </section>
-
 
       </main>
       <footer id="footer" className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
@@ -241,7 +257,7 @@ export default function mainpage() {
             Privacy
           </Link>
         </nav>
-        <div className="ml-auto flex gap-4">
+        <div className="ml-auto flex gap-4 pt-2 bb-4">
           <Link href="#" className="text-muted-foreground hover:text-primary" prefetch={false}>
             <FacebookIcon className="h-5 w-5" />
             <span className="sr-only">Facebook</span>
@@ -260,7 +276,7 @@ export default function mainpage() {
           </Link>
         </div>
       </footer>
-      <div className="fixed bottom-6 right-6">
+      {/* <div className="fixed bottom-6 right-6">
         <Link
           href="#"
           className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
@@ -269,7 +285,7 @@ export default function mainpage() {
           <ArrowUpIcon className="h-6 w-6" />
           <span className="sr-only">Scroll to top</span>
         </Link>
-      </div>
+      </div> */}
     </div>
   )
 }
