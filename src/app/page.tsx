@@ -1,8 +1,5 @@
-import Image from "next/image";
-import MainPage from "../components/component/mainpage";
+import MainLayout from "../components/layouts/MainLayout";
 
 export default function Home() {
-  return (
-    <MainPage/>
-  );
+  return <MainLayout />  ;
 }
