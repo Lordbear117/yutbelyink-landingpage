@@ -9,6 +9,7 @@ import {
   CalendarIcon,
   MailIcon,
 } from "../ui/icons";
+import SmoothScrollLink from "../SmoothScrollLink";
 
 const email = "yutbely@gmail.com";
 const subject = "Contacto desde YutbelyInk";
@@ -20,44 +21,26 @@ const instagramLink = "https://www.instagram.com/yutbely.ink/";
 
 const MainLayout = () => {
   return (
-    <div id="home" className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center sticky top-0 z-50 bg-white">
         <Link
-          href="#home"
+          href="#"
           className="flex items-center justify-center"
           prefetch={false}
         >
           <FlowerIcon className="h-6 w-6" />
         </Link>
         <Link
-          href="#home"
+          href="#"
           className="text-md font-medium hover:underline underline-offset-4 pl-2"
           prefetch={false}
         >
           YUTBELYINK
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            href="#work"
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            Trabajos
-          </Link>
-          <Link
-            href="#about"
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            Sobre mi
-          </Link>
-          <Link
-            href="#contact"
-            className="text-sm font-medium hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            Contacto
-          </Link>
+          <SmoothScrollLink to="work">Trabajos</SmoothScrollLink>
+          <SmoothScrollLink to="about">Sobre mi</SmoothScrollLink>
+          <SmoothScrollLink to="contact">Contacto</SmoothScrollLink>
         </nav>
       </header>
 
