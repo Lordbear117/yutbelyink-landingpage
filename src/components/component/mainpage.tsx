@@ -1,9 +1,11 @@
 import Link from "next/link"
 import { JSX, SVGProps } from "react"
 
-  const email = 'blackyi14343@gmail.com';
+  const email = 'yutbely@gmail.com';
   const subject = 'Contacto desde YutbelyInk';
   const body = 'Hola, soy {incluye tu nombre} me gustaría ponerme en contacto contigo.';
+  const whatsappLink = 'https://wa.me/526671618878?text=Hola%20%20Arlette.%20Te%20contacto%20desde%20tu%20sitio%20web%20de%20tatuajes.';
+  const instagramLink = 'https://www.instagram.com/yutbely.ink/';
 
 export default function mainpage() {
   return (
@@ -17,7 +19,7 @@ export default function mainpage() {
             YUTBELYINK
           </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link href="#hero" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
+          <Link href="#trabajos" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
             Trabajos
           </Link>
           <Link href="#acerca" className="text-sm font-medium hover:underline underline-offset-4" prefetch={false}>
@@ -42,7 +44,7 @@ export default function mainpage() {
           </Link>
           <Link target="_blank" href="https://wa.me/526671618878?text=Hola,%20soy%20Arlette.%20Enviame%20un%20mensaje." className="text-muted-foreground hover:text-primary" prefetch={false}>
             <PhoneIcon className="h-5 w-5" />
-            <span className="sr-only">Whatsapp</span>
+            <span className="sr-only">WhatsappLink</span>
           </Link>
         </div> */}
       </header>
@@ -83,7 +85,7 @@ export default function mainpage() {
             </div>
           </div>
         </section>
-        <section id="portfolio" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="trabajos" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -195,7 +197,7 @@ export default function mainpage() {
               <div className="mx-auto w-full max-w-md space-y-4 pt-4">
                 <div className="grid grid-cols-2 gap-4">
                   <Link
-                    target="_blank" href="https://wa.me/526671618878?text=Hola,%20soy%20Arlette.%20Enviame%20un%20mensaje."
+                    target="_blank" href={whatsappLink}
                     className="inline-flex items-center justify-center rounded-md bg-primary 
                     px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors 
                     hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring 
@@ -206,7 +208,7 @@ export default function mainpage() {
                     WhatsApp
                   </Link>
                   <Link
-                    target="_blank" href="https://www.instagram.com/yutbely.ink/"
+                    target="_blank" href={instagramLink}
                     className="inline-flex items-center justify-center rounded-md bg-primary 
                     px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors 
                     hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 
@@ -262,7 +264,7 @@ export default function mainpage() {
             <FacebookIcon className="h-5 w-5" />
             <span className="sr-only">Facebook</span>
           </Link>
-          <Link target="_blank" href="https://www.instagram.com/yutbely.ink/" className="text-muted-foreground hover:text-primary" prefetch={false}>
+          <Link target="_blank" href={instagramLink} className="text-muted-foreground hover:text-primary" prefetch={false}>
             <InstagramIcon className="h-5 w-5" />
             <span className="sr-only">Instagram</span>
           </Link>
@@ -270,7 +272,7 @@ export default function mainpage() {
             <TwitterIcon className="h-5 w-5" />
             <span className="sr-only">Twitter</span>
           </Link>
-          <Link target="_blank" href="https://wa.me/526671618878?text=Hola,%20soy%20Arlette.%20Enviame%20un%20mensaje." className="text-muted-foreground hover:text-primary" prefetch={false}>
+          <Link target="_blank" href={whatsappLink} className="text-muted-foreground hover:text-primary" prefetch={false}>
             <PhoneIcon className="h-5 w-5" />
             <span className="sr-only">Whatsapp</span>
           </Link>
