@@ -18,19 +18,19 @@ const whatsappLink =
   "https://wa.me/526671618878?text=Hola%20%20Arlette.%20Te%20contacto%20desde%20tu%20sitio%20web%20de%20tatuajes.";
 const instagramLink = "https://www.instagram.com/yutbely.ink/";
 
-export default function mainpage() {
+const MainLayout = () => {
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div id="home" className="flex flex-col min-h-[100dvh]">
       <header className="px-4 lg:px-6 h-14 flex items-center sticky top-0 z-50 bg-white">
         <Link
-          href="#"
+          href="#home"
           className="flex items-center justify-center"
           prefetch={false}
         >
           <FlowerIcon className="h-6 w-6" />
         </Link>
         <Link
-          href="#"
+          href="#home"
           className="text-md font-medium hover:underline underline-offset-4 pl-2"
           prefetch={false}
         >
@@ -38,21 +38,21 @@ export default function mainpage() {
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link
-            href="#trabajos"
+            href="#work"
             className="text-sm font-medium hover:underline underline-offset-4"
             prefetch={false}
           >
             Trabajos
           </Link>
           <Link
-            href="#sobremi"
+            href="#about"
             className="text-sm font-medium hover:underline underline-offset-4"
             prefetch={false}
           >
             Sobre mi
           </Link>
           <Link
-            href="#contacto"
+            href="#contact"
             className="text-sm font-medium hover:underline underline-offset-4"
             prefetch={false}
           >
@@ -78,7 +78,7 @@ export default function mainpage() {
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pb-4 pt-4">
                   <Link
-                    href="#contacto"
+                    href="#contact"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                     prefetch={false}
                   >
@@ -98,7 +98,7 @@ export default function mainpage() {
             </div>
           </div>
         </section>
-        <section id="trabajos" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="work" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container md:px-6 mx-auto px-4">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -171,10 +171,7 @@ export default function mainpage() {
             </div>
           </div>
         </section>
-        <section
-          id="sobremi"
-          className="w-full py-12 md:py-24 lg:py-32 bg-muted"
-        >
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
           <div className="container md:px-6 mx-auto px-4">
             <div className="grid gap-10 sm:px-10 md:gap-16 md:grid-cols-2">
               <div className="space-y-4">
@@ -219,10 +216,10 @@ export default function mainpage() {
         </section>
 
         <section
-          id="contacto"
+          id="contact"
           className="w-full py-12 md:py-24 lg:py-32 bg-muted"
         >
-          <div className="container px-4 md:px-6 mx-auto px-4">
+          <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
@@ -251,9 +248,9 @@ export default function mainpage() {
                   <Link
                     target="_blank"
                     href={instagramLink}
-                    className="inline-flex items-center justify-center rounded-md bg-primary 
-                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors 
-                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 
+                    className="inline-flex items-center justify-center rounded-md bg-primary
+                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors
+                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1
                     focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 pt-4 pb-4"
                     prefetch={false}
                   >
@@ -264,9 +261,9 @@ export default function mainpage() {
                     href={`mailto:${email}?subject=${encodeURIComponent(
                       subject
                     )}&body=${encodeURIComponent(body)}`}
-                    className="inline-flex items-center justify-center rounded-md bg-primary 
-                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors 
-                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring 
+                    className="inline-flex items-center justify-center rounded-md bg-primary
+                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors
+                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring
                     disabled:pointer-events-none disabled:opacity-50 pt-4 pb-4"
                     prefetch={false}
                   >
@@ -275,9 +272,9 @@ export default function mainpage() {
                   </Link>
                   <Link
                     href="#"
-                    className="inline-flex items-center justify-center rounded-md bg-primary 
-                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors 
-                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring 
+                    className="inline-flex items-center justify-center rounded-md bg-primary
+                    px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors
+                    hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring
                     disabled:pointer-events-none disabled:opacity-50 pt-4 pb-4"
                     prefetch={false}
                   >
@@ -357,4 +354,6 @@ export default function mainpage() {
       </footer>
     </div>
   );
-}
+};
+
+export default MainLayout;
