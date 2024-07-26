@@ -9,7 +9,8 @@ import {
   CalendarIcon,
   MailIcon,
 } from "../ui/icons";
-import SmoothScrollLink from "../SmoothScrollLink";
+import SmoothScrollLink from "../ui/SmoothScrollLink";
+import SmoothScrollButton from "../ui/SmoothScrollButton";
 
 const email = "yutbely@gmail.com";
 const subject = "Contacto desde YutbelyInk";
@@ -60,13 +61,7 @@ const MainLayout = () => {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pb-4 pt-4">
-                  <Link
-                    href="#contact"
-                    className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    prefetch={false}
-                  >
-                    Agendar cita
-                  </Link>
+                  <SmoothScrollButton to="contact">Agendar cita</SmoothScrollButton>
                 </div>
               </div>
               <div className="pt-4">
@@ -284,14 +279,14 @@ const MainLayout = () => {
         </Link>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link
-            href="#footer"
+            href=""
             className="text-xs hover:underline underline-offset-4"
             prefetch={false}
           >
             Terms of Service
           </Link>
           <Link
-            href="#footer"
+            href=""
             className="text-xs hover:underline underline-offset-4"
             prefetch={false}
           >
