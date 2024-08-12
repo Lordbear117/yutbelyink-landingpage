@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "YutbelyInk",
-  description: "Landing page for YutbelyInk",
+  description:
+    "Descubre el arte del tatuaje con Yutbely en yutbelyink.me. Diseño personalizado, técnica impecable y una experiencia única en cada trazo. Agenda tu sesión hoy y lleva tu piel al siguiente nivel.",
 };
 
 export default function RootLayout({
