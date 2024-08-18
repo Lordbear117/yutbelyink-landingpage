@@ -61,7 +61,9 @@ const MainLayout = () => {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row pb-4 pt-4">
-                  <SmoothScrollButton to="contact">Agendar cita</SmoothScrollButton>
+                  <SmoothScrollButton to="contact">
+                    Agendar cita
+                  </SmoothScrollButton>
                 </div>
               </div>
               <div className="pt-4">
@@ -174,19 +176,29 @@ const MainLayout = () => {
                   Background
                 </div>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                  Arlette lorem ipsum sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem ipsum sit amet, consectetur adipiscing elit. Sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Originaria de Culiacán, Sinaloa, Arlette ha estado inmersa en
+                  diversas formas de expresión artística desde joven. El tatuaje
+                  le ha permitido fusionar su creatividad con precisión técnica,
+                  marcando el inicio de una carrera prometedora. Aunque está en
+                  las primeras etapas de su trayectoria, su entusiasmo y
+                  atención al detalle la están estableciendo como una artista
+                  confiable para aquellos que buscan diseños únicos y
+                  personalizados. Arlette sigue perfeccionando su arte y está
+                  abierta a explorar nuevos estilos y desafíos.
                 </p>
                 <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
                   Especialidades
                 </div>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed">
-                  Arlette lorem ipsum sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Lorem ipsum sit amet, consectetur adipiscing elit. Sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Arlette se especializa en una amplia gama de estilos de
+                  tatuaje, desde diseños minimalistas y tatuajes en línea fina
+                  hasta arte floral y personajes. Su habilidad para representar
+                  con detalle personajes conocidos, ya sean de la cultura pop o
+                  mitología, complementa su talento para crear diseños
+                  personalizados que reflejan el estilo único de cada cliente.
+                  Ya sea que busques un tatuaje de un personaje específico o una
+                  pieza original, Arlette utiliza su creatividad y técnica para
+                  transformar tu visión en una obra de arte duradera.
                 </p>
               </div>
             </div>
